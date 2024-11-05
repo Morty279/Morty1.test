@@ -1,0 +1,23 @@
+{
+    "name": "morty2/2024",
+    "description": "Blog",
+    "require": {
+        "twig/twig": "^3.14",
+        "miladrahimi/phprouter": "5.*",
+      "ext-pdo": "*"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Morty",
+            "email": "mrbt490@gmail.com"
+        }
+    ]
+}
+
+
