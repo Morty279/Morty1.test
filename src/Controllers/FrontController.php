@@ -17,21 +17,26 @@ class FrontController
         $this->Model = new Article();
     }
 
-    public function index(): void
+    public function index()
     {
-        echo 'Hello World!';
-        //$this->View->showIndexPage();
+        //return '<p>Hello World!</p>';
+        $this->View->showIndexPage();
     }
     public function showArticlesListPage()
     {
         print_r('Hi');
         $articles = $this->Model->getAll();
-        var_dump($articles);
-        //$this->View->renderArticlesListPage($articles);
+        //var_dump($articles);
+        $this->View->renderArticlesListPage($articles);
     }
-    public function showSingleArticlePage($id)
+   public function showSingleArticlePage($id)
     {
         $article = $this->Model->find($id);
-        $this->View->renderSingleArticlePage($article);
+        //var_dump($article);
+        echo $this->View->renderSingleArticlePage($article);
+    }
+    Public function showLoginPage()
+    {
+        echo $this->View->renderLoginPage();
     }
 }
